@@ -6,6 +6,7 @@ module.exports.run = async(bot, message, args) => {
   .setColor("#4286f4")
   .addField("k!avatar", "**Pokazuje twój avatar**")
   .addField("k!ikona", "**Pokazuje ikonke serwera**")
+  .addField("k!server", "**Info o serwerze**")
   message.channel.send(embed);
 }
 module.exports.help = {
