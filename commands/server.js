@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
   let server = message.guild.iconURL;
-  let embed = Discord.RichEmbed()
+  let embed =  new Discord.RichEmbed()
   .setDescription("Info o serwerze")
   .setColor("#647899")
   .setThumbnail(server)
