@@ -14,6 +14,7 @@ module.exports.run = async(bot, message, args) => {
   .addField("Domyślna rola", message.guild.defaultRole)
   .addField("Możliwości", message.guild.features)
   .addField("Ilość użytkowników", message.guild.memberCount)
+  message.channel.send(embed);
 }
 module.exports.help = {
   name:"server"
