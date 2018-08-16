@@ -12,7 +12,6 @@ module.exports.run = async(bot, message, args) => {
   .addField("Koniec czasu AFK", message.guild.afkTimeout)
   .addField("Powiadomienia o wiadomościach", message.guild.defaultMessageNotifications)
   .addField("Domyślna rola", message.guild.defaultRole)
-  .addField("Możliwości", message.guild.features)
   .addField("Ilość użytkowników", message.guild.memberCount)
   message.channel.send(embed);
 }
