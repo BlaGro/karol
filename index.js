@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} jest online!`);
 
-  bot.user.setActivity("P|k! T|Karoxus k!pomoc", {type: "WATCHING"})
+  bot.user.setActivity("Mój prefix k! | k!pomoc", {type: "WATCHING"})
 });
 
 bot.on("message", async message => {
@@ -40,6 +40,11 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+
+  if(message.content === "@everyone"){
+    message.delete().catch(O_o=>{});
+    return;
+  }
 
 });
 
